@@ -25,5 +25,15 @@
     }
   },
   "forwardPorts": [8080],
-  "postCreateCommand": "mvn clean install || true"
+  "postCreateCommand": [
+    "mvn clean install || true",
+    "echo 'nameserver 10.255.255.254' | sudo tee -a /etc/resolv.conf",
+    "echo 'nameserver nssw01-tk.hitachi.co.jp' | sudo tee -a /etc/resolv.conf",
+    "sudo apt-get update && sudo apt-get install -y gh"
+  ],
+  "remoteEnv": {
+    "HTTP_PROXY": "http://umproxy.prx.intra.hitachi.co.jp:8080",
+    "HTTPS_PROXY": "http://umproxy.prx.intra.hitachi.co.jp:8080"
+  }
 }
+
