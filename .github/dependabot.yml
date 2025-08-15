@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"       # Mavenプロジェクトを指定
+    directory: "/"                   # pom.xmlがあるディレクトリ
+    schedule:
+      interval: "weekly"             # 更新頻度: daily / weekly / monthly
+      day: "monday"                  # 毎週月曜日に実行（任意）
+      time: "04:00"                  # UTC時間で指定（例: 13:00 JSTなら04:00）
+    open-pull-requests-limit: 5      # 同時に開くPRの上限
+    labels:
+      - "dependencies"
+      - "security"
