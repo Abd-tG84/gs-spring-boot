@@ -1,0 +1,35 @@
+# Maven build
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Gradle build
+/build/
+/.gradle/
+
+# IDE設定
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+
+# ログ・一時ファイル
+*.log
+*.tmp
+
+# Spring Boot特有
+*.jar
+*.war
+*.ear
+
+# 環境設定
+application-*.yml
+application-*.properties
+.env
+
+# キャッシュ
+.mvn/timing.properties
